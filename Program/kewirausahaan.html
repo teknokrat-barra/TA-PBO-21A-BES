@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kewirausahaan</title>
+</head>
+
+<!-- internal css -->
+<style>
+    .area_component {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .area_label {
+        width: 10%;
+    }
+
+    .area_input {
+        width: 85%;
+    }
+
+    .txt_component {
+        width: 30%;
+    }
+
+    .btn_component {
+        outline: 0;
+        border-radius: 15px;
+        border: 1px solid #333333;
+        height: 40px;
+        padding: 10px 30px;
+        cursor: pointer;
+        background: #f3f3f3;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .frame_table {
+        border: 1px solid #333333;
+        height: 30px;
+        padding: 10px;
+    }
+
+    .frame_header {
+        background: #f3f3f3;
+        height: 30px;
+        padding: 10px;
+    }
+
+    .remove_cell {
+        background-color: #ffbbbb;
+        cursor: pointer;
+    }
+
+    .header {
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <h1 class="header">Kewirausahaan Koperasi Sekolah SMK Negri 1 Bandar Lampung</h1>
+    <p class="header">Kewirausahaan dalam konteks koperasi SMK Negeri 1 Bandar Lampung mengacu pada upaya untuk
+        mengembangkan
+        keterampilan kewirausahaan dan mentalitas bisnis di antara para siswa.
+        Koperasi tersebut memberikan kesempatan kepada siswa untuk belajar tentang inovasi, manajemen, pemasaran, dan
+        aspek-aspek lain dari dunia bisnis. Ini melibatkan pelatihan, pembelajaran praktis,
+        dan pengalaman nyata dalam merancang, mengelola, dan mempromosikan produk atau layanan mereka sendiri. Tujuannya
+        adalah untuk mempersiapkan siswa agar memiliki keterampilan yang dibutuhkan dalam menghadapi tantangan dunia
+        kerja,
+        membangun minat dan kepercayaan diri dalam berwirausaha, serta mempromosikan sikap kreatif dan berorientasi pada
+        solusi dalam setiap situasi.
+    </p><br>
+
+    <section class="area_component">
+        <section class="area_label">
+            <label for="txt_nama">Nama</label>
+        </section>
+        <section class="area_input">
+            <input type="text" name="" id="txt_nama" placeholder="Isi Nama Anda" class="txt_component" />
+        </section>
+    </section>
+
+    <section class="area_component">
+        <section class="area_label">
+            <label for="txt_jurusan">Jurusan</label>
+        </section>
+        <section class="area_input">
+            <input type="text" name="" id="txt_jurusan" placeholder="Isi Jurusan Anda" class="txt_component" />
+        </section>
+    </section>
+
+    <section class="area_component">
+        <section class="area_label">
+            <label for="txt_ide">Ide Bisnis</label>
+        </section>
+        <section class="area_input">
+            <input type="text" name="" id="txt_ide" placeholder="Isi Ide Bisnis Anda" class="txt_component" />
+        </section>
+    </section>
+
+    <section class="area_component">
+        <section class="area_label">
+            <label for="txt_telp">No. Telepon</label>
+        </section>
+        <section class="area_input">
+            <input type="text" name="" id="txt_telp" placeholder="Isi No. telepon" class="txt_component" />
+        </section>
+    </section>
+
+    <section class="area_component">
+        <button id="btn_daftar" class="btn_component">Daftar</button>
+    </section>
+
+    <table id="tbl_data">
+        <tr>
+            <th class="frame_table frame_header" style="width: 7%">Aksi</th>
+            <th class="frame_table frame_header" style="width: 5%">No.</th>
+            <th class="frame_table frame_header" style="width: 23%">Nama</th>
+            <th class="frame_table frame_header" style="width: 20%">Jurusan</th>
+            <th class="frame_table frame_header" style="width: 30%">Ide Bisnis</th>
+            <th class="frame_table frame_header" style="width: 15%">No. Telepon</th>
+        </tr>
+    </table>
+
+    <script>
+        let txt_nama = document.querySelector("#txt_nama");
+        let txt_jurusan = document.querySelector("#txt_jurusan");
+        let txt_ide = document.querySelector("#txt_ide");
+        let txt_telp = document.querySelector("#txt_telp");
+        let btn_daftar = document.querySelector("#btn_daftar");
+        let tbl_data = document.querySelector("#tbl_data");
+
+        let data = [];
+
+        btn_daftar.addEventListener("click", () => {
+            if (txt_nama.value == "" || txt_jurusan.value == "" || txt_ide.value == "" || txt_telp.value == "") {
+                alert("Lengkapi Seluruh Data !");
+            }
+            else {
+                data.push([txt_nama.value, txt_jurusan.value, txt_ide.value, txt_telp.value]);
+
+                viewData();
+            }
+        });
+
+        const clearComponent = () => {
+            txt_nama.value = "";
+            txt_jurusan.value = "";
+            txt_ide.value = "";
+            txt_telp.value = "";
+        }
+
+        const keyNumber = (event) => {
+            if (event.key >= "0" && event.key <= "9") {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        const keyText = (event) => {
+            if (
+                (event.key >= "a" && event.key <= "z") ||
+                (event.key >= "A" && event.key <= "Z") ||
+                event.which == 32 || event.key == "."
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        const viewData = () => {
+            let baris_tabel = 0;
+            let content_tabel = `<tr>
+            <th class="frame_table frame_header" style="width: 7%">Aksi</th>
+            <th class="frame_table frame_header" style="width: 5%">No.</th>
+            <th class="frame_table frame_header" style="width: 23%">Nama</th>
+            <th class="frame_table frame_header" style="width: 20%">Jurusan</th>
+            <th class="frame_table frame_header" style="width: 30%">Ide Bisnis</th>
+            <th class="frame_table frame_header" style="width: 15%">No. Telepon</th>
+        </tr>`;
+
+            // lakukan perulangan "forEach" > (looping untuk array)
+            // isi data > data yang akan ditampilkan ke tabel
+            // looping data > jumlah data (array) yang akan ditampilkan ke tabel, dimana looping dimulai dari 0
+            data.forEach((isi_data, looping_data) => {
+                // buat baris isi
+                content_tabel += "<tr>";
+
+                // buat kolom untuk Hapus Data
+                content_tabel += `<td class="frame_table remove_cell" style="text-align: center" onclick="removeData(${looping_data})">Hapus Data</td>`;
+                // buat kolom untuk nomor
+                content_tabel += `<td class="frame_table" style="text-align: center">${looping_data + 1}</td>`;
+                // buat kolom untuk data nama
+                content_tabel += `<td class="frame_table">${isi_data[0]}</td>`;
+                // buat kolom untuk data jurusan
+                content_tabel += `<td class="frame_table">${isi_data[1]}</td>`;
+                // buat kolom untuk data ide bisnis
+                content_tabel += `<td class="frame_table">${isi_data[2]}</td>`;
+                // buat kolom untuk data telepon
+                content_tabel += `<td class="frame_table">${isi_data[3]}</td>`;
+
+                // tutup baris isi
+                content_tabel += "</tr>";
+
+                // tambah baris baru (baris_tabel ditambah 1)
+                baris_tabel++;
+            });
+
+            // tampilkan "content_tabel" ke dalam "tbl_data"
+            tbl_data.innerHTML = content_tabel;
+
+            // panggil fungsi "clearComponent"
+            clearComponent();
+        };
+
+        // buat fungsi "removeData" untuk menghapus array berdasarkan index yang dipilih
+        const removeData = (index) => {
+            // jika tombol "Ok" di klik
+            if (
+                confirm(
+                    `Data Mahasiswa : ${data[index][0]} (index ke-${index}) Ingin Dihapus ?`
+                ) == true
+            ) {
+                // hapus array berdasarkan index yang dipilih
+                data.splice(index, 0);
+
+                // panggil fungsi "viewData"
+                viewData();
+            }
+        };
+        txt_telp.addEventListener(
+            "keypress",
+            (event) => (event.returnValue = keyNumber(event))
+        );
+        txt_nama.addEventListener(
+            "keypress",
+            (event) => (event.returnValue = keyText(event))
+        );
+        txt_jurusan.addEventListener(
+            "keypress",
+            (event) => (event.returnValue = keyText(event))
+        );
+        txt_ide.addEventListener(
+            "keypress",
+            (event) => (event.returnValue = keyText, keyNumber(event))
+        );
+    </script>
+</body>
+
+</html>
