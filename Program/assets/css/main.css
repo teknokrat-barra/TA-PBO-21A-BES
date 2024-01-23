@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
 
 * html {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     border: 0;
     outline: 0;
 }
@@ -99,15 +99,11 @@ html, body {
 }
 
 .header-area {
-    background-image: url(../images/header-bg.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
+    position:absolute;
     height: 110px;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 10px;
+    left: 50px;
+    right: 50px;
     z-index: 100;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
@@ -118,11 +114,14 @@ html, body {
 .header-area .main-nav {
     min-height: 80px;
     background: transparent;
+    /* overflow-y: auto;
+    overflow-x: hidden; */
 }
 
 .header-area .main-nav .logo {
-    width: 30%;
+    width: 25%;
     line-height: 120px;
+    margin-top: 18px;
     color: #fff;
     font-size: 28px;
     font-weight: 700;
@@ -234,7 +233,7 @@ html, body {
 }
   
 .header-area .main-nav .nav li.has-sub:after {
-    font-family: FontAwesome;
+    /* font-family: FontAwesome; */
     content: "\f107";
     font-size: 12px;
     color: #fff;
@@ -392,37 +391,6 @@ html, body {
         background: #eee !important;
         color: #ff511a!important;
     }
-    .header-area .main-nav .nav li.has-sub ul.sub-menu {
-        position: relative;
-        visibility: inherit;
-        opacity: 1;
-        z-index: 1;
-        transform: translateY(0%);
-        top: 0px;
-        width: 100%;
-        box-shadow: none;
-        height: 0px;
-        transition: all 0s;
-    }
-    .header-area .main-nav .nav li.submenu ul li a {
-        font-size: 12px;
-        font-weight: 400;
-    }
-    .header-area .main-nav .nav li.submenu ul li a:hover:before {
-        width: 0px;
-    }
-    .header-area .main-nav .nav li.has-sub ul.sub-menu {
-        height: auto;
-    }
-    .header-area .main-nav .nav li.has-sub:after {
-        color: #3B566E;
-        right: 30px;
-        font-size: 14px;
-        top: 15px;
-    }
-    .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
-        height: 0px;
-    }
 }
   
 @media (min-width: 767px) {
@@ -431,3 +399,55 @@ html, body {
     }
 }
 
+.banner {
+    height: calc(100vh - 0px);
+    margin: 0px;
+}
+
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.inner .header-text {
+    position: absolute;
+    width: 50%;
+    top: 55%;
+    left: 80px;
+    transform: translateY(-50%);
+}
+
+.inner .header-text h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 56px;
+    color: #ffa631;
+    font-weight: 700;
+    opacity: 1;
+    visibility: visible;
+    line-height: 70px;
+    margin-bottom: 25px;
+}
+
+.inner .header-text .div-dec {
+    width: 150px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 25px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.inner .header-text p {
+    color: #fff;
+    margin-right: 60px;
+     margin-bottom: 50px;
+    opacity: 1;
+    visibility: visible;
+}
