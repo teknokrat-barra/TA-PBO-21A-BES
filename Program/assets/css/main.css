@@ -112,10 +112,9 @@ html, body {
 }
 
 .header-area .main-nav {
-    min-height: 80px;
+    width: 100%;
     background: transparent;
-    /* overflow-y: auto;
-    overflow-x: hidden; */
+    /* background-color: #2a2a2a; */
 }
 
 .header-area .main-nav .logo {
@@ -450,4 +449,75 @@ html, body {
      margin-bottom: 50px;
     opacity: 1;
     visibility: visible;
+}
+
+.services {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.services h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.services .service-item {
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-left: 80px;
+    width: 40%;
+    float: left;
+}
+  
+.services .service-item h4 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services .service-item p {
+    font-size: 18px;
+    text-align: left;
+    margin: 0px 5px 25px 0px;
+}
+
+.services .service-item-kewirausahaan {
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-right: 105px;
+    float: left;
+}
+
+.services .service-item-kewirausahaan h4 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services .service-item-kewirausahaan p {
+    font-size: 18px;
+    text-align: left;
+    margin: 0px 5px 25px 0px;
+}
+
+.service-item-kewirausahaan .daftar {
+    width: 180px;
+    height: 38px;
+    float: right;
+    color: white;
+    font-size: 18px;
+    background-color: #191a20;
+    border-radius: 30px;
+    border: 2px solid white;
+    margin-right: 25px;
+}
+
+.service-item-kewirausahaan .daftar:hover {
+    background-color: #ffa631;
 }
