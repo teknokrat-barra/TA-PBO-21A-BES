@@ -115,7 +115,7 @@ html, body {
 .header-area .main-nav {
     width: 100%;
     background: transparent;
-    /* background-color: #2a2a2a; */
+    /* background-color: #212741; */
 }
 
 .header-area .main-nav .logo {
@@ -525,10 +525,11 @@ html, body {
 
 .header {
     text-align: center;
-    color: #ff511a;
+    color: #ffa631;
 }
 
 .bg-header{
+    width: 100%;
     padding: 0%;
     background-color: #212741;;
 }
