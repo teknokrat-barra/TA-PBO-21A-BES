@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 ul, li {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style-type: none;
 }
 
 ul {
@@ -465,9 +465,10 @@ html, body {
 .services .service-item {
     border-radius: 15px;
     padding: 50px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     margin-top: 40px;
     margin-left: 80px;
+    margin-right: 40px;
     width: 40%;
     float: left;
 }
@@ -487,10 +488,11 @@ html, body {
 .services .service-item-kewirausahaan {
     border-radius: 15px;
     padding: 50px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     margin-top: 40px;
     margin-left: 80px;
-    margin-right: 105px;
+    margin-right: 70px;
+    margin-bottom: 90px;
     float: left;
 }
 
@@ -520,4 +522,160 @@ html, body {
 
 .service-item-kewirausahaan .daftar:hover {
     background-color: #ffa631;
+}
+
+.about-us {
+    display: block;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.about-us .heading {
+    padding-top: 80px;
+    margin-bottom: 60px;
+}
+
+.about-us .heading h4 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-us .heading p {
+    font-size: 18px;
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.about-us .about {
+    margin-top: 20px;
+    /* background-color: #212741;
+    border-radius: 20px; */
+}
+
+.about-us .about-item {
+    margin-bottom: 50px;
+}
+
+.about-us .about-item h6 {
+    font-size: 30px;
+}
+
+.about-us .about-item p {
+    font-size: 18px;
+    padding-bottom: 5px;
+    text-align: justify;
+}
+
+.about-us .about-item ol {
+    margin-bottom: 50px;
+}
+
+.about-us .about-item li {
+    font-size: 17px;
+    list-style-type: circle;
+}
+
+section.testimonials {
+    margin-top: 90px;
+}
+  
+section.testimonials .section-heading {
+    padding-top: 30px;
+}
+
+.testimonials .section-heading h4 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.testimonials .item {
+    border-radius: 25px;
+    padding: 50px 320px 50px 50px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 35px;
+}
+  
+.testimonials .item i {
+    width: 50px;
+    height: 50px;
+    background-color: #43ba7f;
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    font-size: 44px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+  
+.testimonials .item p {
+    font-size: 16px;
+    font-style: italic;
+}
+  
+.testimonials .item h4 {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+  
+.testimonials .item span {
+    margin-top: 5px;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #43ba7f;
+}
+  
+.testimonials .item img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 300px;
+    border-radius: 5px;
+}
+  
+.testimonials .owl-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.testimonials .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffa88c;
+    border-radius: 50%;
+    margin: 0px 4px;
+}
+  
+.testimonials .owl-dots .active {
+    background-color: #ff511a;
+}
+  
+footer {
+    background-color: #181d30;
+    /* border-radius: 80px; */
+    text-align: center;
+    height: 80px;
+    padding: 15px;
+    margin-top: 55px;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+  
+footer p {
+    color: #fff;
+}
+
+footer p em {
+    color: #ffa631;
 }
