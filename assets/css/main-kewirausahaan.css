@@ -102,9 +102,9 @@ html, body {
     margin-left: 0%;
     position:absolute;
     height: 110px;
-    top: 10px;
-    left: 50px;
-    right: 50px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 100;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
