@@ -99,6 +99,7 @@ html, body {
 }
 
 .header-area {
+    margin-left: 0%;
     position:absolute;
     height: 110px;
     top: 10px;
@@ -521,3 +522,72 @@ html, body {
 .service-item-kewirausahaan .daftar:hover {
     background-color: #ffa631;
 }
+
+.header {
+    text-align: center;
+    color: #ff511a;
+}
+
+.bg-header{
+    padding: 0%;
+    background-color: #212741;;
+}
+
+.area_component {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.area_label {
+    text-align: center;
+    width: 100%;
+}
+
+.area_input {
+    margin-left: 33.4%;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.txt_component {
+    border-radius: 50px;
+    padding: 15px 50px;
+    width: 50%;
+    text-align: center;
+}
+
+
+.btn_component {
+    margin-left: 45.5%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    outline: 0;
+    border-radius: 50px;
+    border: 1px solid #212741;
+    height: 50px;
+    padding: 10px 50px;
+    cursor: pointer;
+    background: #212741;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.frame_table {
+    border: 1px solid #000000;
+    height: 30px;
+    padding: 10px;
+}
+
+.frame_header {
+    border: 2px solid #000000;
+    color: #ffffff;
+    background: #212741;
+    height: 30px;
+    padding: 10px;
+}
+
